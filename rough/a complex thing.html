@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        .cont{
+            display: grid;
+            grid-template-areas: 
+            "H H"
+            "SB C"
+            "F F";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 100px 1fr 100px;
+            gap: 10px;
+            height: 400px;
+
+        }
+        .H{
+            grid-area: H;
+            background-color: yellow;
+        }
+        .SB{
+            grid-area: SB;
+            background-color: blue;
+        }
+        .C{
+            grid-area: C;
+            background-color: green;
+        }
+        .F{
+            grid-area: F;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+         <div class="H">header</div>
+         <div class="SB">sidebar</div>
+          <div class="C"> content</div>
+           <div class="F">footer</div>
+    </div>
+    
+</body>
+</html>

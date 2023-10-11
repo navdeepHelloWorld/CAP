@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Put your weight here</h3>
+    <br>
+    <input type="number" class="box">
+    <h3>Put your height here</h3>
+    <br>
+    <input type="number" class="box">
+    <p>Your BMI is <h4 class="heading"></h4> which means you are <h4 class="heading"></h4></p>
+    <button id="enter">ENTER</button>
+</body>
+<script>
+      let inputs=document.getElementsByClassName("box")
+     let headings=document.getElementsByClassName("heading")
+   let calculate=document.getElementsById("enter")
+   
+   calculate.addEventListener("click", function() {
+        let bmi = inputs[0].value / (inputs[1].value * inputs[1].value);
+        headings[0].innerText = bmi.toFixed(2); 
+
+        if (bmi <= 18.4) {
+            headings[1].innerText = "underweight";
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+            headings[1].innerText = "normal weight";
+        } else if (bmi >= 25 && bmi <= 29.9) {
+            headings[1].innerText = "overweight";
+        } else {
+            headings[1].innerText = "obese";
+        }
+    })
+
+
+
+
+</script>
+
+</html>

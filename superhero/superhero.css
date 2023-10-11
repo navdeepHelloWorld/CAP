@@ -1,0 +1,136 @@
+
+    /* body{ */
+        /* background-image: https://i.ytimg.com/vi/XH6Mqo8yACk/maxresdefault.jpg ; */
+    /* width: 500px;/ */
+    /* } */
+    #container{
+        /* height: 800px; */
+        /* width: 80%; */
+        /* border: 1px solid red; */
+        margin: auto;
+        padding-top: 10px;
+        background-color: aqua;
+        font-family:cursive;
+        /* background-image: url(https://i.ytimg.com/vi/XH6Mqo8yACk/maxresdefault.jpg) ; */
+        /* opacity : 50% ; */
+
+    }
+    #child{
+        height: 80px;
+        width: 50%;
+        /* border: 1px solid red; */
+        border-radius: 50px;
+        margin: auto;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 30px;
+        text-align: center;
+        background-color: rgb(240, 245, 107);
+        /* padding: auto; */
+    }
+    #child>h1{
+        margin:auto;
+         text-decoration: rgb(41, 25, 190);
+         color: rgb(211, 91, 6);
+
+    }
+    
+    #parent{
+       /* height: 400px; */
+       width: auto;
+       /* border: 1px solid black; */
+       margin: auto;
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       grid-template-rows: repeat(2,350px);
+       gap: 5px;
+    }
+    #parent>div{
+        /* border: 1px solid red; */
+        border-radius: 50px;
+    
+    }
+    #parent>div:nth-child(1)>img{
+        width: 270px;
+        /* height: 300px; */
+        /* border: 1px solid green; */
+        border-radius: 50px;
+        /* margin: auto; */
+        /* align-items: center; */
+        /* align-content: center; */
+    }
+    #parent>div:nth-child(2){
+        text-align: center;
+        background-color: rgb(237, 181, 86);
+    }
+#parent>div:nth-child(3){
+    text-align: center;
+    background-color: rgb(97, 205, 167);
+}
+#parent>div:nth-child(4){
+    text-align: left;
+    background-color: rgb(234, 109, 190);
+}
+#parent>div:nth-child(5){
+    text-align: center;
+    background-color: rgb(135, 196, 238);
+}
+#parent>div:last-child{
+    /* height: 150px; */
+     background-color: rgb(208, 235, 101);
+    display: grid;
+    grid-template-columns: repeat(2,120px);
+    grid-template-rows: repeat(2,120px);
+    padding: 20px 30px 90px;
+    margin-top: 70px;
+}
+#parent>div:last-child>div{
+    width: auto;
+    border: 10px solid rgb(233, 136, 27);
+    border-radius: 50%;
+    margin: 10px;
+    text-align: center;
+    padding: 20px 0px;
+    font-family:cursive;
+    font-size: 30px;
+}
+h2{
+    font-family:cursive;
+    color: rgba(230, 46, 17, 0.504);
+    background-color: rgb(196, 223, 219);
+    border-radius: 40px;
+    border-style: groove;
+}
+
+@media all and (min-width:521px) and (max-width:850px){
+    #parent{
+        display: grid;
+       grid-template-columns: repeat(2,1fr);
+       grid-template-rows:auto;
+       padding: 10px;
+       /* background-color: blueviolet; */
+     }
+     #child{
+        font-size: 20px;
+    
+     }
+}
+/* wrong width value in media section is given because
+      my text was overlaping each other during
+       reducing the width of the window */
+
+     @media all and (min-width:320px) and (max-width:520px){
+        #parent{ 
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+             grid-template-rows:auto;
+             /* background-color: brown; */
+            
+          }
+          #child{
+            font-size: 18px;
+          }
+     } 
+     
+
+
+

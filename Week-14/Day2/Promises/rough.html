@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promises</h1>
+    <script>
+// let myPromise1=new Promise(function(resolve,reject{}))
+// console.log(myPromise1)
+// let myPromise2=new Promise(function(resolve,reject){
+//     resolve("promise resolved")})
+
+// console.log(myPromise2)
+
+// let myPromise3=new Promise(function(resolve,reject){
+//     reject("promise reject")
+// })
+// console.log(myPromise3)
+
+// let myPromise4=new Promise(function(solved,reject){
+//     solved("promise solved")
+// })
+// console.log(myPromise4)
+
+// ================>>>>
+
+//Imitating a async operation(network request);
+// let isNetworkRequestSuccessfull =false
+// let myPromise=new Promise(function (resolve,reject){
+//     setTimeout(function () {
+// if(isNetworkRequestSuccessfull){
+//     const data =[
+//         { id:1, name:"batman"},
+//         { id:2, name:"aquaman"},
+//     ]
+//     resolve(data)
+// }
+// else{
+//     reject({message :"request failed"})
+// }
+
+//     },200)
+// })
+
+// console.log(myPromise)
+// myPromise
+// .then(function(resolve){
+// console.log(resolve)
+// })
+// .catch(function(err){
+//     console.log(err)
+// })
+//////////////
+
+
+
+let isSuccessful = true;
+function fetchData() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      if (isSuccessful) {
+        resolve({ mesg: "resolved" });
+      } else {
+        reject({ mesg: "rejected" });
+      }
+    }, 1000);
+  });
+}
+
+fetchData()
+  .then(function (info) {
+    console.log(info);
+  })
+  .catch(function (rejectMessage) {
+    console.log(rejectMessage);
+  });
+    </script>
+
+
+
+</body>
+</html>
